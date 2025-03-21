@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/Red"
+        android:background="@color/blue_darkest"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             app:tabMode="scrollable"
             app:tabGravity="start"
-            app:tabIndicatorColor="@color/Red"
-            app:tabSelectedTextColor="@color/Red"
-            app:tabTextColor="@color/textColor" />
+            app:tabIndicatorColor="@color/blue_darkest"
+            app:tabSelectedTextColor="@color/blue_darkest"
+            app:tabTextColor="@color/neutral_darkest" />
     </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
@@ -55,7 +55,7 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:indeterminateTint="@color/Red"
+        android:indeterminateTint="@color/blue_darkest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:src="@drawable/ic_playlist_empty"
-            app:tint="@color/textColor" />
+            app:tint="@color/neutral_darkest" />
 
         <TextView
             android:layout_width="wrap_content"

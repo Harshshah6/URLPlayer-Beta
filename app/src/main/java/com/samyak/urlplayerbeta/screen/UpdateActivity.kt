@@ -45,8 +45,8 @@ class UpdateActivity : AppCompatActivity() {
         }
         
         // Set both title and navigation icon color to white
-        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
-        toolbar.navigationIcon?.setTint(ContextCompat.getColor(this, R.color.white))
+        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.neutral_lightest))
+        toolbar.navigationIcon?.setTint(ContextCompat.getColor(this, R.color.neutral_lightest))
     }
 
     private fun initializeViews() {

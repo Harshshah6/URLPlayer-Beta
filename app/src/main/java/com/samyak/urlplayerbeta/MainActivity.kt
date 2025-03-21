@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             setHomeAsUpIndicator(R.drawable.ic_menu)
             title = getString(R.string.app_name)
         }
-        binding.toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.white))
+        binding.toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.neutral_lightest))
     }
 
     private fun setupClickListeners() {

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="@color/neutral_lightest"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
@@ -46,7 +46,7 @@
 
                 android:text="PlumberName"
                 android:textSize="16sp"
-                android:textColor="@color/black"
+                android:textColor="@color/neutral_lightest"
                 app:layout_constraintBottom_toTopOf="@+id/tvChannelLink"
                 app:layout_constraintStart_toEndOf="@+id/URLplayerBeta"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -58,7 +58,7 @@
 
                 android:text="https"
                 android:textSize="20sp"
-                android:textColor="@color/textColor"
+                android:textColor="@color/neutral_darkest"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/tvChannelName"
                 app:layout_constraintTop_toBottomOf="@+id/tvChannelName" />
@@ -72,7 +72,7 @@
 
                 android:text="Edit"
                 android:textAllCaps="false"
-                android:textColor="@color/white"
+                android:textColor="@color/neutral_lightest"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="button_text_color">#FFFFFF</color>
-    <color name="text_color">#000000</color>
-    <color name="yellow">#FFC107</color>
-    <color name="Red">#F8144F</color>
-    <color name="textColor">#616161</color>
-    <color name="colorNormalBg">#ffffffff</color>
+    <color name="success_dark">#298267</color>
+    <color name="success_medium">#3AC0A0</color>
+    <color name="success_light">#E7F4E8</color>
+
+    <color name="warning_dark">#E86339</color>
+    <color name="warning_medium">#FFB37C</color>
+    <color name="warning_light">#FFF4E4</color>
+
+    <color name="error_dark">#ED3241</color>
+    <color name="error_medium">#FF616D</color>
+    <color name="error_light">#FFE2E5</color>
+
+    <color name="blue_darkest">#006FFD</color>
+    <color name="blue_dark">#2897FF</color>
+    <color name="blue_medium">#6FB9FF</color>
+    <color name="blue_light">#B3DAFF</color>
+    <color name="blue_lightest">#EAF2FF</color>
+
+    <color name="neutral_darkest">#C5C6CC</color>
+    <color name="neutral_dark">#D4D6DD</color>
+    <color name="neutral_medium">#E8E9F1</color>
+    <color name="neutral_light">#F8F9FE</color>
+    <color name="neutral_lightest">#FFFFFF</color>
 
     <color name="transparent">@android:color/transparent</color>
 </resources>

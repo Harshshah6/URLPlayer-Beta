@@ -15,7 +15,7 @@
         android:id="@+id/main_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@color/neutral_lightest"
         android:contentDescription="@string/main_content">
 
         <!-- Toolbar -->
@@ -23,7 +23,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Red"
+            android:background="@color/blue_darkest"
             android:elevation="4dp"
             android:titleTextColor="@android:color/white"
             app:layout_constraintTop_toTopOf="parent"/>
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="32dp"
                 android:layout_marginBottom="20dp"
-                app:cardBackgroundColor="@color/Red"
+                app:cardBackgroundColor="@color/blue_darkest"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -81,7 +81,7 @@
                         android:layout_height="48dp"
                         android:src="@drawable/tv"
                         android:contentDescription="@string/tv_icon"
-                        app:tint="@color/white"/>
+                        app:tint="@color/neutral_lightest"/>
 
                     <TextView
                         android:id="@+id/online_videos_text"
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:text="@string/online_videos"
-                        android:textColor="@color/white"
+                        android:textColor="@color/neutral_lightest"
                         android:textSize="16sp"
                         android:textStyle="bold"/>
 
@@ -135,7 +135,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/white"
+        android:background="@color/neutral_lightest"
         android:contentDescription="@string/drawer_content"
         app:headerLayout="@layout/nav_header"
         app:itemIconSize="28dp"
@@ -143,8 +143,8 @@
         app:itemVerticalPadding="16dp"
         app:itemHorizontalPadding="24dp"
         app:itemTextAppearance="@style/NavDrawerTextStyle"
-        app:itemIconTint="@color/Red"
-        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/blue_darkest"
+        app:itemTextColor="@color/neutral_darkest"
         app:menu="@menu/drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

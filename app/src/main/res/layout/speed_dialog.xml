@@ -19,7 +19,7 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/minus_icon"
-            android:tint="@color/white"
+            android:tint="@color/neutral_lightest"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/speed"
-            android:textColor="@color/white"
+            android:textColor="@color/neutral_lightest"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -42,7 +42,7 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/plus_icon"
-            android:tint="@color/white"
+            android:tint="@color/neutral_lightest"
             tools:ignore="SpeakableTextPresentCheck" />
 
 
@@ -64,7 +64,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:text="@string/apply_to_all"
-            android:textColor="@color/white" />
+            android:textColor="@color/neutral_lightest" />
 
     </LinearLayout>
 

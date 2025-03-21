@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/Red"
+            android:background="@color/blue_darkest"
             android:titleTextColor="@android:color/white"
 
             android:elevation="4dp"
@@ -127,9 +127,9 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="8dp"
-            android:backgroundTint="@color/Red"
+            android:backgroundTint="@color/blue_darkest"
             android:elevation="2dp"
-            app:rippleColor="@color/Red"
+            app:rippleColor="@color/blue_darkest"
             android:stateListAnimator="@null"/>
 
         <com.google.android.material.button.MaterialButton
@@ -142,9 +142,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             app:cornerRadius="8dp"
-            android:backgroundTint="@color/yellow"
             android:elevation="2dp"
-            app:rippleColor="@color/yellow"
             android:stateListAnimator="@null"/>
 
     </LinearLayout>

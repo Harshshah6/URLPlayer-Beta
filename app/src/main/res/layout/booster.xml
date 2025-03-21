@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:text="@string/booster"
-        android:textColor="@color/white"
+        android:textColor="@color/neutral_lightest"
         android:textSize="18sp" />
 
 </LinearLayout>

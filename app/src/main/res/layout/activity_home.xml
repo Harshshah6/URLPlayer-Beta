@@ -7,14 +7,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".screen.HomeActivity"
-    android:background="@color/white">
+    android:background="@color/neutral_lightest">
 
     <!-- Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/Red"
+        android:background="@color/blue_darkest"
         android:title="M3U8 Server"
         android:titleTextColor="@android:color/white"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -62,7 +62,7 @@
                 android:text="@string/empty_channels_message"
                 android:textAlignment="center"
                 android:textSize="16sp"
-                android:textColor="@color/text_color"/>
+                android:textColor="@color/neutral_darkest"/>
         </LinearLayout>
     </FrameLayout>
 
@@ -102,7 +102,7 @@
         android:contentDescription="@string/add_url"
         app:srcCompat="@drawable/ic_added"
         app:tint="@android:color/white"
-        app:backgroundTint="@color/Red"
+        app:backgroundTint="@color/blue_darkest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/adContainer"/>
 
