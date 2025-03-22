@@ -13,4 +13,7 @@ object AppConstants {
     // Play Store
     const val PLAY_STORE_BASE_URL = "http://play.google.com/store/apps/details?id="
     const val MARKET_BASE_URL = "market://details?id="
+
+    // Sharedpref keys
+    const val SETTINGS_ONBOARD_CHECKED = "onBoardChecked"
 } 

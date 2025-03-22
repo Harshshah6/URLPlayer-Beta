@@ -14,16 +14,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/bottom"
-        android:background="@color/blue_lightest">
+        android:background="@color/blue_lightest"
+        android:gravity="center">
 
-
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:importantForAccessibility="no"
+            android:src="@drawable/about_icon"
+            app:tint="@color/blue_light" />
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/bottom"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,18 +77,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:maxLines="3"
             android:text="The ultimate video player that supports various formats, streaming protocols, and more. Enjoy seamless playback with powerful features."
             android:textSize="16sp"/>
 
-        <android.widget.Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nextBtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginVertical="28dp"
             android:text="Next"
-            android:textColor="@color/neutral_darkest"
+            android:textColor="@color/blue_lightest"
             android:textAllCaps="false"
-            android:background="@drawable/primary_button_background"/>
+            android:backgroundTint="@color/blue_darkest"
+            app:cornerRadius="8dp"/>
 
     </LinearLayout>
 

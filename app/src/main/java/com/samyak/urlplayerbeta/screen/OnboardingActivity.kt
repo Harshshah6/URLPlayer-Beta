@@ -2,17 +2,21 @@ package com.samyak.urlplayerbeta.screen
 
 import android.animation.ObjectAnimator
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.RippleDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.edit
+import com.samyak.urlplayerbeta.MainActivity
 import com.samyak.urlplayerbeta.R
 import com.samyak.urlplayerbeta.databinding.ActivityOnboardingBinding
+import com.samyak.urlplayerbeta.utils.AppConstants
 import com.samyak.urlplayerbeta.utils.LanguageManager
 import java.util.Locale
 
@@ -20,6 +24,7 @@ class OnboardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnboardingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         // Auto-detect system language on first run
         val prefs = getSharedPreferences("settings", Context.MODE_PRIVATE)
@@ -47,13 +52,18 @@ class OnboardingActivity : AppCompatActivity() {
                 }
             }
         }
+        val sharedPref = getSharedPreferences("settings", MODE_PRIVATE)
+        if(sharedPref.contains(AppConstants.SETTINGS_ONBOARD_CHECKED) && sharedPref.getBoolean(AppConstants.SETTINGS_ONBOARD_CHECKED, false)){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
 
         binding = ActivityOnboardingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         var index = 0;
         binding.nextBtn.setOnClickListener {
-            index = if (index == 2) 0 else index + 1
+            index++
             animateDot(dot = binding.dot1, false)
             animateDot(dot = binding.dot2, false)
             animateDot(dot = binding.dot3, false)
@@ -77,7 +87,12 @@ class OnboardingActivity : AppCompatActivity() {
                 }
 
                 else -> {
-
+                    index = 0
+                    getSharedPreferences("settings", MODE_PRIVATE).edit {
+                        putBoolean("onBoardChecked", true)
+                    }
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                 }
             }
         }
