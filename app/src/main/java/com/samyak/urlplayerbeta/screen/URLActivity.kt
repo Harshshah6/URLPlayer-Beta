@@ -142,17 +142,30 @@ class URLActivity : AppCompatActivity() {
             return true
         }
 
-        // Check for streaming keywords in the URL
+        // Enhanced check for PHP-based streams with query parameters
+        if (lowercaseUrl.contains(".php") && lowercaseUrl.contains("?")) {
+            return true
+        }
+        
+        // Enhanced check for streaming keywords in the URL
         return lowercaseUrl.contains("stream") || 
                lowercaseUrl.contains("live") || 
                lowercaseUrl.contains("video") ||
-               lowercaseUrl.contains("play")
+               lowercaseUrl.contains("play") ||
+               lowercaseUrl.contains("cricket") ||
+               lowercaseUrl.contains("sport") ||
+               lowercaseUrl.contains("match") ||
+               lowercaseUrl.contains("tv") ||
+               lowercaseUrl.contains("channel") ||
+               lowercaseUrl.contains("tata") ||
+               lowercaseUrl.contains("id=")
     }
 
     private fun detectUrlType(url: String): String {
         val lowercaseUrl = url.lowercase()
         return when {
             lowercaseUrl.endsWith(".m3u8") -> "HLS"
+            lowercaseUrl.contains(".m3u8?") -> "HLS" // Added support for m3u8 with query params
             lowercaseUrl.endsWith(".mp4") -> "MP4"
             lowercaseUrl.endsWith(".avi") -> "AVI"
             lowercaseUrl.endsWith(".mkv") -> "MKV"
@@ -167,6 +180,15 @@ class URLActivity : AppCompatActivity() {
             lowercaseUrl.startsWith("rtp://") -> "RTP"
             lowercaseUrl.startsWith("mms://") -> "MMS"
             lowercaseUrl.startsWith("srt://") -> "SRT"
+            // Add special detection for PHP-based streams
+            lowercaseUrl.contains(".php") && lowercaseUrl.contains("?") -> "HLS"
+            // Add special detection for live content
+            lowercaseUrl.contains("live") || 
+            lowercaseUrl.contains("stream") || 
+            lowercaseUrl.contains("cricket") || 
+            lowercaseUrl.contains("match") ||
+            lowercaseUrl.contains("tv") ||
+            lowercaseUrl.contains("tata") -> "LIVE"
             else -> "HTTP"
         }
     }
@@ -201,14 +223,26 @@ class URLActivity : AppCompatActivity() {
 
             // Add new channel with URL type detection
             val urlType = detectUrlType(url)
+            val isLiveStream = urlType == "LIVE" || 
+                              urlType == "HLS" || 
+                              url.lowercase().contains("live") ||
+                              url.lowercase().contains("cricket") ||
+                              url.lowercase().contains("match") ||
+                              url.lowercase().contains("tv") ||
+                              url.lowercase().contains("tata") ||
+                              (url.lowercase().contains(".php") && url.lowercase().contains("?"))
+            
             val newLinks = currentLinks.toMutableSet()
             
-            // Format: title###url###urlType###userAgent
+            // Format: title###url###urlType###userAgent###isLiveStream
             val channelData = buildString {
                 append("${video.name}###${video.url}###$urlType")
                 if (!video.userAgent.isNullOrEmpty()) {
                     append("###${video.userAgent}")
+                } else {
+                    append("###")
                 }
+                append("###$isLiveStream")
             }
             
             newLinks.add(channelData)
